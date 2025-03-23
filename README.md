@@ -1,10 +1,20 @@
 # Organizador de arquivos
 
- Programa que possui duas funcionalidades:
+O programa possui duas funcionalidades principais:
 
- #1 → Permite ao usuáro separar arquivos por mês
- 
- #2 → Permite ao usuário separar arquivos em pastas de 100 em 100
+1. Organizar Arquivos por Mês:
+
+Esta funcionalidade permite que o usuário mova os arquivos para pastas correspondentes aos meses do ano.
+
+Arquivos que contêm a abreviação do mês ("JAN", "FEV" etc.) serão automaticamente movidos para a pasta correspondente (caso a pasta não exista, ela será criada automaticamente).
+
+2. Organizar Arquivos em Pastas de 100 em 100:
+
+Esta funcionalidade permite que o usuário organize os arquivos em pastas contendo até 100 arquivos cada.
+
+Por exemplo, se houver 380 arquivos, o programa criará quatro pastas: três contendo 100 arquivos e uma com 80 arquivos.
+
+
 
 
 
