@@ -1,6 +1,6 @@
 # Organizador de arquivos
 
- Programa que possui duias funcionalidade:
+ Programa que possui duas funcionalidades:
 
  #1 → Permite ao usuáro separar arquivos por mês
  
