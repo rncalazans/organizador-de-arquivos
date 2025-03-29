@@ -19,7 +19,7 @@ Funcionalidade em contrução...
 ### MELHORIAS A APLICAR: 
 1 → Fazer modularização  
 2 → Na função ORGANIZAR nao criar a pasta do mes caso não tenha arquivos para mover  
-3 → Finalizar a funcao Separa XML
+3 → Finalizar a funcionalidade SEPARAR
 
 
 ### BILBIOTECAS USADAS:
