@@ -9,15 +9,17 @@ Arquivos que contêm a abreviação do mês ("JAN", "FEV" etc.) serão automatic
 Esta funcionalidade permite que o usuário organize os arquivos em pastas contendo até 100 arquivos cada.
 Por exemplo, se houver 380 arquivos, o programa criará quatro pastas: três contendo 100 arquivos e uma com 80 arquivos.
 
+2. Conversor de XML em PDF:
+Funcionalidade em contrução...
 
 
 
 
-### MELHORIAS A APLICAR:
-1 → Criar um executavel  
-2 → Nao criar a pasta do mes caso não tenha arquivos para mover  
-3 → Tela de login  
-4 → Fazer modularização
+
+### MELHORIAS A APLICAR: 
+1 → Fazer modularização
+2 → Na função ORGANIZAR nao criar a pasta do mes caso não tenha arquivos para mover
+3 → Finalizar a funcao Separa XML
 
 
 ### BILBIOTECAS USADAS:
