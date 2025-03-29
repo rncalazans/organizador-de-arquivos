@@ -178,7 +178,7 @@ def main_serarar():
 
 # -------------------------- Funções de Mensagens: EM CONSTRUCAO --------------------------
 def mensagem_em_construcao():
-    messagebox.showinfo('AGUARDE', "'Em construção...'")
+    messagebox.showinfo('AGUARDE', 'Funcionalidade em CONSTRUÇÃO...')
 
 
 
@@ -187,19 +187,19 @@ def tela_organizador():
     frame_separador.place_forget()
     frame_conversor.place_forget()
     frame_about.place_forget()
-    frame_organizador.place(x=200, y=3, width=520, height=350)
+    frame_organizador.place(x=170, y=3, width=550, height=350)
 
 def tela_separador():
     frame_organizador.place_forget()
     frame_conversor.place_forget()
     frame_about.place_forget()
-    frame_separador.place(x=200, y=3, width=520, height=350)
+    frame_separador.place(x=170, y=3, width=550, height=350)
 
 def tela_conversor():
     frame_organizador.place_forget()
     frame_separador.place_forget()
     frame_about.place_forget()
-    frame_conversor.place(x=200, y=3, width=520, height=350)
+    frame_conversor.place(x=170, y=3, width=550, height=350)
 
 def tela_home():
     frame_organizador.place_forget()
@@ -211,7 +211,7 @@ def tela_about():
     frame_organizador.place_forget()
     frame_separador.place_forget()
     frame_conversor.place_forget()
-    frame_about.place(x=200, y=3, width=520, height=350)
+    frame_about.place(x=165, y=3, width=580, height=350)
 
 
 
@@ -266,19 +266,21 @@ instruction0.place(x=218, y=3, width=500, height=30)
 instruction1 = Label(tela_inicial,
                     text='Instruções de uso do programa:',
                     bg="#2d3839",
-                    font=('Corbel Light', 10),
+                    font=('Corbel Light', 13),
                     fg='#e0e4ce')
 instruction1.place(x=343, y=42, width=250, height=30)
 
 instruction2 = Label(tela_inicial,
                     text='''
-ORGANIZADOR de pastas por mês: analisa os nomes dos arquivos e os move automaticamente para pastas organizadas por mês, com base na informação contida no nome do arquivo.
+Analisa os nomes dos arquivos e os move automaticamente para pastas organizadas por mês, com base na informação contida no nome do arquivo. 
+Ex: Arquivos com "JAN" serão movidos para a pasta "Janeiro", arquivos com "FEV" para "Fevereiro", e assim por diante.
 
 
-SEPARADOR de arquivos em pastas de 100 em 100: distribui os arquivos existentes em pastas separadas, agrupando 100 arquivos por pasta, facilitando a organização e o manuseio de grandes volumes de arquivos.
+Separa arquivos em pastas agrupando-os de 100 em 100.
+Ex: Se na pasta selecionada houver 365 arquivos, serão criadas 4 pastas: três com 100 arquivos e uma com 65 arquivos.
 
 
-COMVERTER XML em PDF: localiza os arquivos XML e gera automaticamente suas versões em PDF, agilizando o processo de visualização e impressão das notas.''',
+Converte XML em PDF: localiza os arquivos XML e gera automaticamente suas versões em PDF, agilizando o processo de visualização e impressão das notas.''',
                     bg="#2d3839",
                     font=('Arabic Transparent', 10),
                     wraplength=500,
@@ -287,6 +289,18 @@ COMVERTER XML em PDF: localiza os arquivos XML e gera automaticamente suas vers�
 instruction2.place(x=200, y=76, width=525, height=220)
 
 
+# SETAS
+imagem_seta1 = PhotoImage(file='images\\seta.png')
+label_imagem1 = Label(tela_inicial, image=imagem_seta1, bg='#2d3839')
+label_imagem1.place(x=176, y=100, width=28, height=28)
+
+imagem_seta2 = PhotoImage(file='images\\seta.png')
+label_imagem2 = Label(tela_inicial, image=imagem_seta2, bg='#2d3839')
+label_imagem2.place(x=176, y=180, width=28, height=28)
+
+imagem_seta3 = PhotoImage(file='images\\seta.png')
+label_imagem3 = Label(tela_inicial, image=imagem_seta3, bg='#2d3839')
+label_imagem3.place(x=176, y=260, width=28, height=28)
 
 
 # ---------------------------- Tela ORGANIZADOR ----------------------------
@@ -297,14 +311,14 @@ instruction0 = Label(frame_organizador,
     bg="#2d3839",
     font=('Courier', 18, 'bold', 'underline'),
     fg='#e0e4ce')
-instruction0.place(x=110, y=3, width=320, height=30)
+instruction0.place(x=140, y=3, width=320, height=30)
 
 instruction1 = Label(frame_organizador,
                      text='Digite um caminho para organizar os arquivos por mês:',
                      bg="#2d3839",
                      font=('Corbel Light', 13),
                      fg='#e0e4ce')
-instruction1.place(x=75, y=80, width=380, height=20)
+instruction1.place(x=105, y=80, width=380, height=20)
 
 instruction2 = Label(frame_organizador,
                      text='''
@@ -318,11 +332,11 @@ instruction2 = Label(frame_organizador,
                      bg="#2d3839",
                      font=('Courier', 8),
                      fg='#e0e4ce')
-instruction2.place(x=17, y=175, width=450, height=110)
+instruction2.place(x=47, y=175, width=450, height=110)
 
 # ENTRADA DE DADOS
 e1 = Entry(frame_organizador, width=50)
-e1.place(x=37, y=105, width=450, height=20)
+e1.place(x=67, y=105, width=450, height=20)
 
 # BOTAO ORGANIZAR
 button = Button(frame_organizador,
@@ -330,7 +344,7 @@ button = Button(frame_organizador,
                 command=main_organizar,
                 font=("Fixedsys", 12, 'bold'),
                 bg='#6e9987')
-button.place(x=208, y=135, width=100, height=25)
+button.place(x=238, y=135, width=100, height=25)
 
 # RESPOSTA AO USUARIO
 texto_resposta_organizador = Label(tela_inicial, text='')
@@ -346,14 +360,14 @@ instruction0 = Label(frame_separador,
     bg="#2d3839",
     font=('Courier', 18, 'bold', 'underline'),
     fg='#e0e4ce')
-instruction0.place(x=110, y=3, width=320, height=30)
+instruction0.place(x=140, y=3, width=320, height=30)
 
 instruction1 = Label(frame_separador,
                      text='Digite um caminho para separar os arquivos de 100 em 100:',
                      bg="#2d3839",
                      font=('Corbel Light', 13),
                      fg='#e0e4ce')
-instruction1.place(x=75, y=80, width=400, height=20)
+instruction1.place(x=105, y=80, width=400, height=20)
 
 instruction2 = Label(frame_separador,
                      text='''
@@ -367,11 +381,11 @@ instruction2 = Label(frame_separador,
                      bg="#2d3839",
                      font=('Courier', 8),
                      fg='#e0e4ce')
-instruction2.place(x=17, y=175, width=450, height=110)
+instruction2.place(x=47, y=175, width=450, height=110)
 
 # ENTRADA DE DADOS
 e2 = Entry(frame_separador, width=50)
-e2.place(x=37, y=105, width=450, height=20)
+e2.place(x=67, y=105, width=450, height=20)
 
 # BOTAO SEPARAR
 button = Button(frame_separador,
@@ -379,7 +393,7 @@ button = Button(frame_separador,
                 command=main_serarar,
                 font=("Fixedsys", 12, 'bold'),
                 bg='#6e9987')
-button.place(x=208, y=135, width=100, height=25)
+button.place(x=238, y=135, width=100, height=25)
 
 # RESPOSTA AO USUARIO
 texto_resposta_separador = Label(tela_inicial, text='')
@@ -395,14 +409,14 @@ instruction0 = Label(frame_conversor,
     bg="#2d3839",
     font=('Courier', 18, 'bold', 'underline'),
     fg='#e0e4ce')
-instruction0.place(x=110, y=3, width=320, height=30)
+instruction0.place(x=140, y=3, width=320, height=30)
 
 instruction1 = Label(frame_conversor,
                      text="Digite um caminho onde estão os xml's:",
                      bg="#2d3839",
                      font=('Corbel Light', 13),
                      fg='#e0e4ce')
-instruction1.place(x=75, y=80, width=380, height=20)
+instruction1.place(x=105, y=80, width=380, height=20)
 
 instruction2 = Label(frame_conversor,
                      text='''
@@ -415,11 +429,11 @@ instruction2 = Label(frame_conversor,
                      bg="#2d3839",
                      font=('Courier', 8),
                      fg='#e0e4ce')
-instruction2.place(x=17, y=175, width=450, height=110)
+instruction2.place(x=47, y=175, width=450, height=110)
 
 # ENTRADA DE DADOS
 e3 = Entry(frame_conversor, width=50)
-e3.place(x=37, y=105, width=450, height=20)
+e3.place(x=67, y=105, width=450, height=20)
 
 # BOTAO CONVERTER
 button = Button(frame_conversor,
@@ -427,7 +441,7 @@ button = Button(frame_conversor,
                 command=mensagem_em_construcao,
                 font=("Fixedsys", 12, 'bold'),
                 bg='#6e9987')
-button.place(x=208, y=135, width=100, height=25)
+button.place(x=238, y=135, width=100, height=25)
 
 
 
@@ -435,10 +449,35 @@ button.place(x=208, y=135, width=100, height=25)
 # ---------------------------- Tela ABOUT ----------------------------
 frame_about = Frame(tela_inicial, bg='#2d3839')
 #TEXTOS DE INSTRUÇÕES
-imagem_eu = PhotoImage(file='images\\eu.png')
-label_imagem = Label(frame_about, image=imagem_eu)
-label_imagem.place(x=35, y=0, width=465, height=320)
+imagem_eu = Image.open('images\\eu.png')
+imagem_redimensionada = imagem_eu.resize((200, 262))
+imagem_convertida = ImageTk.PhotoImage(imagem_redimensionada)
+label_imagem = Label(frame_about, image=imagem_convertida, bg='#2d3839')
+label_imagem.place(x=350, y=20, width=200, height=320)
 
+nome = Label(frame_about,
+    text='    Renan Calazans',
+    bg="#2d3839",
+    font=('Courier', 18, 'bold', 'underline'),
+    fg='#e0e4ce')
+nome.place(x=175, y=3, width=500, height=30)
+
+texto_sobre_mim = Label(frame_about,
+                     text='''
+                     • Contador & Programador •
+
+                     Unindo tecnologia e contabilidade
+                     para soluções eficientes
+
+                     
+                     Entre em contato:
+                     📞 (81) 98549-0395
+                     📧 renancalazans98@gmail.com''',
+                     bg="#2d3839",
+                     font=('Corbel Light', 15),
+                     fg='#e0e4ce',
+                     justify='center')
+texto_sobre_mim.place(x=-35, y=12, width=350, height=300)
 
 
 
