@@ -453,7 +453,7 @@ button.place(x=238, y=135, width=100, height=25)
 
 # ---------------------------- Tela ABOUT ----------------------------
 frame_about = Frame(tela_inicial, bg='#2d3839')
-#TEXTOS DE INSTRUÇÕES
+# TEXTOS SOBRE MIM
 imagem_eu = Image.open('images\\eu.png')
 imagem_redimensionada = imagem_eu.resize((200, 262))
 imagem_convertida = ImageTk.PhotoImage(imagem_redimensionada)
@@ -484,6 +484,7 @@ texto_sobre_mim = Label(frame_about,
                      justify='center')
 texto_sobre_mim.place(x=-35, y=5, width=350, height=285)
 
+# LINK PARA CONTATO
 clique_aqui_saibamais = Label(frame_about,
                      text='Clique aqui para saber mais',
                      bg="#2d3839",
