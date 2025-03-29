@@ -27,6 +27,7 @@ Funcionalidade em contrução...
 • Shutill  
 • Tkinter  
 • Pillow
+• webbrowser
 
 > Siga-me no [Instagram](https://www.instagram.com/rncalazans/?next=%2F)  
 > Siga-me no [Likedin](https://www.linkedin.com/in/renancalazansdev/)
