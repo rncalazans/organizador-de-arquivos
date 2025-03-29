@@ -3,6 +3,7 @@ import shutil
 from tkinter import *
 from tkinter import messagebox
 from PIL import Image, ImageTk
+import webbrowser
 
 
 # ------------------------- Funções de Ação -------------------------'
@@ -173,6 +174,10 @@ def main_serarar():
     caminho_a_separar = e2.get()
     separar(caminho_a_separar)
     messagebox.showinfo("Resultado...", texto_resposta_separador['text'])
+
+def abrir_link(event):
+    webbrowser.open("https://linktr.ee/renancalazans?fbclid=PAZXh0bgNhZW0CMTEAAaYOELlAc2qtsGpVLBnynUjQXLvMbcGCoVD9-GSxgM8nK2o5gE5VXTD-XgM_aem_mUfEcZYLJlADYNPNMl6MbQ")
+
 
 
 
@@ -477,8 +482,17 @@ texto_sobre_mim = Label(frame_about,
                      font=('Corbel Light', 15),
                      fg='#e0e4ce',
                      justify='center')
-texto_sobre_mim.place(x=-35, y=12, width=350, height=300)
+texto_sobre_mim.place(x=-35, y=5, width=350, height=285)
 
+clique_aqui_saibamais = Label(frame_about,
+                     text='Clique aqui para saber mais',
+                     bg="#2d3839",
+                     font=('Corbel Light', 11, 'bold'),
+                     fg='#6e9987',
+                     justify='center',
+                     cursor="hand2")
+clique_aqui_saibamais.place(x=85, y=290, width=200, height=18)
+clique_aqui_saibamais.bind("<Button-1>", abrir_link)
 
 
 
