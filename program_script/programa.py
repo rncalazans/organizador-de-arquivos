@@ -4,7 +4,7 @@ from tkinter import *
 from tkinter import messagebox
 from PIL import Image, ImageTk
 import webbrowser
-
+import sys
 
 # ------------------------- Funções de Ação -------------------------'
 def organizar(caminho):
@@ -178,7 +178,15 @@ def main_serarar():
 def abrir_link(event):
     webbrowser.open("https://linktr.ee/renancalazans?fbclid=PAZXh0bgNhZW0CMTEAAaYOELlAc2qtsGpVLBnynUjQXLvMbcGCoVD9-GSxgM8nK2o5gE5VXTD-XgM_aem_mUfEcZYLJlADYNPNMl6MbQ")
 
-
+# ------------------------- Função de Imagem -------------------------
+def carregar_imagem(nome_arquivo):
+    if getattr(sys, 'frozen', False):
+        pasta_base = sys._MEIPASS
+    else:
+        pasta_base = os.path.dirname(os.path.abspath('images'))
+    caminho_imagem = os.path.join(pasta_base, "images", nome_arquivo)
+    imagem = Image.open(caminho_imagem)
+    return imagem
 
 
 # -------------------------- Funções de Mensagens: EM CONSTRUCAO --------------------------
@@ -225,8 +233,9 @@ def tela_about():
 tela_inicial = Tk()
 tela_inicial.title('Tratador de Arquivos - CALAZANS')
 tela_inicial.geometry('800x450')
-icon = PhotoImage(file="images\\rc2.png")
-tela_inicial.iconphoto(True, icon)
+icon = carregar_imagem('rc2.png')
+icon_convertida = ImageTk.PhotoImage(icon)
+tela_inicial.iconphoto(True, icon_convertida)
 tela_inicial.configure(
     pady=50,
     padx=15,
@@ -237,7 +246,7 @@ tela_inicial.configure(
 
 
 # BOTOES LATERAIS
-icon_home = Image.open('images\\home1.png')
+icon_home = carregar_imagem('home1.png')
 icon_home_resized = icon_home.resize((32, 32), Image.Resampling.LANCZOS)
 icon_home_tk = ImageTk.PhotoImage(icon_home_resized)
 home_button = Button(tela_inicial, image=icon_home_tk, command=tela_home)
@@ -295,16 +304,19 @@ instruction2.place(x=200, y=76, width=525, height=220)
 
 
 # SETAS
-imagem_seta1 = PhotoImage(file='images\\seta.png')
-label_imagem1 = Label(tela_inicial, image=imagem_seta1, bg='#2d3839')
+imagem_seta1 = carregar_imagem('seta.png')
+imagem_seta1_convertida = ImageTk.PhotoImage(imagem_seta1)
+label_imagem1 = Label(tela_inicial, image=imagem_seta1_convertida, bg='#2d3839')
 label_imagem1.place(x=176, y=100, width=28, height=28)
 
-imagem_seta2 = PhotoImage(file='images\\seta.png')
-label_imagem2 = Label(tela_inicial, image=imagem_seta2, bg='#2d3839')
+imagem_seta2 = carregar_imagem('seta.png')
+imagem_seta2_convertida = ImageTk.PhotoImage(imagem_seta2)
+label_imagem2 = Label(tela_inicial, image=imagem_seta2_convertida, bg='#2d3839')
 label_imagem2.place(x=176, y=180, width=28, height=28)
 
-imagem_seta3 = PhotoImage(file='images\\seta.png')
-label_imagem3 = Label(tela_inicial, image=imagem_seta3, bg='#2d3839')
+imagem_seta3 = carregar_imagem('seta.png')
+imagem_seta3_convertida = ImageTk.PhotoImage(imagem_seta3)
+label_imagem3 = Label(tela_inicial, image=imagem_seta3_convertida, bg='#2d3839')
 label_imagem3.place(x=176, y=260, width=28, height=28)
 
 
@@ -454,7 +466,7 @@ button.place(x=238, y=135, width=100, height=25)
 # ---------------------------- Tela ABOUT ----------------------------
 frame_about = Frame(tela_inicial, bg='#2d3839')
 # TEXTOS SOBRE MIM
-imagem_eu = Image.open('images\\eu.png')
+imagem_eu = carregar_imagem('eu.png')
 imagem_redimensionada = imagem_eu.resize((200, 262))
 imagem_convertida = ImageTk.PhotoImage(imagem_redimensionada)
 label_imagem = Label(frame_about, image=imagem_convertida, bg='#2d3839')
