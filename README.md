@@ -1,4 +1,5 @@
-# **Organizador de arquivos**
+# **Organizador de arquivos** 
+***
 O programa possui duas funcionalidades principais:
 
 1. Organizar Arquivos por Mês:
@@ -12,22 +13,24 @@ Por exemplo, se houver 380 arquivos, o programa criará quatro pastas: três con
 2. Conversor de XML em PDF:
 Funcionalidade em contrução...
 
-
-
+### BILBIOTECAS USADAS:
+- OS  
+- Shutill  
+- Tkinter  
+- Pillow  
+- webbrowser
 
 
 ### MELHORIAS A APLICAR: 
-1 → Fazer modularização  
-2 → Na função ORGANIZAR nao criar a pasta do mes caso não tenha arquivos para mover  
-3 → Finalizar a funcionalidade SEPARAR
+- [ ] Fazer modularização  
+- [ ] Na função ORGANIZAR nao criar a pasta do mes caso não tenha arquivos para mover  
+- [ ] Finalizar a funcionalidade SEPARAR
+- [x] Criar Box de Mensagens em forma de resposta ao usuário
+- [x] Criar link clicável na tela ABOUT
+- [x] Colocar imagens no programa
+- [x] Colocar ícone no programa
+- [x] Colocar um rodapé com meu nome
 
-
-### BILBIOTECAS USADAS:
-• OS  
-• Shutill  
-• Tkinter  
-• Pillow  
-• webbrowser
 
 > Siga-me no [Instagram](https://www.instagram.com/rncalazans/?next=%2F)  
 > Siga-me no [Likedin](https://www.linkedin.com/in/renancalazansdev/)
